@@ -12,6 +12,10 @@ public class SpellChecker {
 
 	public static String tail(String str) {
 		// Your code goes here
+		if (str.isEmpty()) {
+			return "";
+		}
+		return str.substring(1);
 	}
 
 	public static int levenshtein(String word1, String word2) {
@@ -24,7 +28,10 @@ public class SpellChecker {
 		In in = new In(fileName);
 
 		// Your code here
-
+		int length = dictionary.length;
+		for (int i = 0; i < length; i++) {
+			dictionary[i] = in.readLine();
+		}
 		return dictionary;
 	}
 
