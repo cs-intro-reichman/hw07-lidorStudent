@@ -26,7 +26,7 @@ public class HashTagTokenizer {
 		// Your code here
 		int length = dictionary.length;
 		for (int i = 0; i < length; i++) {
-			if (word == dictionary[i]) {
+			if (word.equals(dictionary[i])) {
 				return true;
 			}
 		}
@@ -42,14 +42,15 @@ public class HashTagTokenizer {
         }
  
         int N = hashtag.length();
-		String lowHashtag = hashtag.toLowerCase();
+		hashtag = hashtag.toLowerCase();
 		String subString = "";
 
         for (int i = 1; i <= N; i++) {
-			subString = lowHashtag.substring(0, i);
+			subString = hashtag.substring(0, i);
 			if (existInDictionary(subString, dictionary)) {
 				System.out.println(subString);
-				breakHashTag(lowHashtag.substring(i + 1, N), dictionary);
+				breakHashTag(hashtag.substring(i), dictionary);
+				break;
 			}
         }
     }
