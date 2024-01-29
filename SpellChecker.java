@@ -12,7 +12,7 @@ public class SpellChecker {
 
 	public static String tail(String str) {
 		// Your code goes here
-		if (str.isEmpty()) {
+		if (str.length() == 1) {
 			return "";
 		}
 		return str.substring(1);
@@ -55,10 +55,12 @@ public class SpellChecker {
 		// Your code goes here
 		int length = dictionary.length;
 		int minDistance = levenshtein(word, dictionary[0]);
+		int levenshtein = 0;
 		String similarWord = "";
 		for (int i = 0; i < length; i++) {
-			if (levenshtein(word, dictionary[i]) <= minDistance) {
-				minDistance = levenshtein(word, dictionary[i]);
+			levenshtein = levenshtein(word, dictionary[i]);
+			if (levenshtein < minDistance) {
+				minDistance = levenshtein;
 				similarWord = dictionary[i];
 			}
 		}
