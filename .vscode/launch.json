@@ -16,7 +16,7 @@
             "request": "launch",
             "mainClass": "HashTagTokenizer",
             "projectName": "hw07-lidorStudent_62059752",
-            "args": "IlovetHeUniversitY"
+            "args": "IlovetHeUniversitYdi"
         },
         {
             "type": "java",
@@ -30,7 +30,8 @@
             "name": "SpellChecker",
             "request": "launch",
             "mainClass": "SpellChecker",
-            "projectName": "hw07-lidorStudent_62059752"
+            "projectName": "hw07-lidorStudent_62059752",
+            "args": "hell0 1"
         }
     ]
 }
